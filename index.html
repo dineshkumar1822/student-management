@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student management</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+	<style>
+
+		
+	*{  margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+  
+    .navbor{border-right: 2px solid white;
+    }
+.bgnav{background-color: black;
+position: sticky;
+            top: 0;
+            /*background: ;*/
+            z-index: 10;}
+#login-form{
+	display: none;
+}
+#myVideo {
+	/*background-color: rgba(0,0,0,0.5);*/
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+z-index: -1;
+}
+.headbg{background-color:rgba(0,0,0,0.8);
+padding-top: 120px;
+padding-bottom: 50px }
+.depbg{
+	background-color: #42484d;
+}
+.dep{
+	margin-left: 50px;
+	margin-top: 60px;
+}
+.streamborder{
+	border-top: 10px solid #4e5ac3;
+	padding-top: 10px;
+
+}
+li{list-style: none;
+  color: white;
+  padding-bottom: 45px;
+font-family: Baloo 2;
+line-height: 20px;
+justify-content: right;}
+
+.Departments{
+	padding-top: 60px;
+	padding-left: 60px;
+
+}
+.companies{ padding-left: 60px; }
+.about{background-color:white; }
+/*.col-md-3{padding-left: 70px;}*/
+img{height: 150px; width: 150px;}
+	
+	</style>
+
+
+
+
+</head>
+<body>
+
+	<video autoplay muted loop id="myVideo">
+  <source src="https://player.vimeo.com/external/185192145.sd.mp4?s=1e7a763b7c7a02f5541bb0c23ee75d1d398737bf&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+	<nav class="navbar  navbar-expand-md navbar-dark bgnav ">
+        <a href="#" class="navbar-brand text-center" style="color: gold; font-size: 25px; font-weight: 500; font-family: fantasy; ">
+            Abc <br>Institutions
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ">
+                <a href="index.html" class="nav-item nav-link active font-weight-bold">Home</a>
+                <a href="#" class="nav-item nav-link font-weight-bold ">Profile</a>
+                <a href="#" class="nav-item nav-link font-weight-bold">Messages</a>
+                <a href="#" class="nav-item nav-link  font-weight-bold" >Reports</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="admin_login.php" class="nav-item nav-link navbor" onclick="admindisplay()"> Admin Login</a>   <a href="student_login.php" class="nav-item nav-link"> Student Login</a>
+            </div>
+        </div>
+    </nav>
+	
+		
+
+		
+<!-- //container starts  -->
+		<div class=" container-fluid " id="formsetting">
+		
+
+     <!-- class="headbg" id="home"> -->
+    	<div class="row headbg  ">
+    		<div class="col-lg-7 col-md-7 col-12  d-block mx-auto">
+    			<p style="font-weight: 700; font-size: 100px;"  class="pt-4 pb-4">
+    				<span class="text-primary">Excellence</span><span class="text-white"> Infinty</span>
+    			</p>
+    			
+    		</div>
+    		
+    	</div>
+         <div class="row depbg">
+<div class="col-lg-5 col-md-5 col-12 px-5 ml-2 ">
+         	<p style="font-size: 70px; color: white; font-weight: 700; line-height: 50px; font-family: monospace;" class="dep"><span class="text " style="border-top: 10px solid white;">0</span>ur<br> Departments</p></div></div>
+    	<div class="row depbg Departments" style="font-size: 20px;">
+    		
+    		<div class=" col-md-3 col-12  ">
+    		<li>	<p><span class="streamborder">Mec</span >hanical<br>Engineering</p></li>
+    		<li>	<p ><span class="streamborder">com</span >puter science<br>Engineering</p></li>
+    		<li>	<p ><span class="streamborder">Ele</span >ctrical<br>Engineering</p></li>
+    		
+    		</div>
+
+    		<div class=" col-md-3 col-12 ">
+    		<li>	<p><span class="streamborder">Mec</span >hanical<br>Engineering</p></li>
+    		<li>	<p ><span class="streamborder">com</span >puter science<br>Engineering</p></li>
+    		<li>	<p ><span class="streamborder">Ele</span >ctrical<br>Engineering</p></li>
+    		
+    		</div>	
+
+    			
+    		
+    		<div class=" col-md-3 col-12  ">
+    			<li>	<p class="mx-auto"><span class="streamborder">Mec</span >hanical<br>Engineering</p></li>
+    		<li>	<p class="mx-auto"><span class="streamborder">Mec</span >hanical<br>Engineering</p></li>
+    		<li>	<p class="mx-auto"><span class="streamborder">Mec</span >hanical<br>Engineering</p></li>
+    			
+    		</div>
+    		<div class=" col-md-3 col-12 ">
+    			<li>	<p class="ml-auto"><span class="streamborder">Mec</span >hanical<br>Engineering</p></li>
+    		<li>	<p class=""><span class="streamborder">Mec</span >hanical<br>Engineering</p></li>
+    		<li>	<p class=""><span class="streamborder">Mec</span >hanical<br>Engineering</p></li>
+    			
+    		</div>
+    	</div>
+    	<div class="row headbg">
+    		<div class="col-12 ">
+    			<p style="font-size: 70px; font-weight: 400; color: white;">100 % Placements</p>
+    			<p style="font-size: 70px; font-weight: 400; color: white;">More than 500 companies</p>
+    			<p style="color: gold; font-size: 30px;">Best Education,Best Faculty & Quality Education</p>
+    		</div>
+    		
+    	</div>
+    	<div class="row about">
+    		<p style="font-size: 100px; line-height: 80px;font-family: coda caption; padding-top: 40px;"><span style="border-top: 10px solid #4e5ac3; ">W</span>ho <br>We Are</p>
+    		<div class="col-lg-12 col-md-12 col-12">
+    			<p style="font-weight: 500;">Genesis and Upward Journey Sri Sairam Engineering College, Chennai, established in the year 1995 by MJF.Ln.Leo Muthu, Chairman of Sapthagiri Educational Trust, is a non-profitable, and non-minority institution. A well defined vision, highly committed mission and dedicated leadership facilitate Sri Sairam Engineering College to be in the best of educational institutions in the country. Since its inception , our Institution has grown into a vast conglomerate of magnificent buildings, state-of-the art and sophisticated laboratories internet centres, modern library and a superlative sports complex-each a land mark in itself across 300 acres. Its quiet and idyllic surroundings, comprising of the architecturally
+    			Sri Sairam Institute of Management and Computer Applications, also a unit of Sri Sairam Engineering College, was established in the year 1997 and it offers MBA and MCA programmes . Our Chairman has not only stopped with his vision of providing Technical Education but has also ventured into the arena of medical sciences, by starting a Medical College for Indian Medicine namely Siddha, Ayurvedha & Homeopathy. He was also instrumental in starting “The Academy for Blind” and “Home for the aged” under the community service programmes of the Lions Club</p>
+    		</div>
+
+    		
+    	</div>
+    	<div class="row headbg">
+    		<div class="col-12 text-center">
+    			
+    			<p style="color: gold; font-size: 30px;">MAKE THE FIRST MOVE TOWARDS A
+PROMISING FUTURE!
+</p>
+<button style="background-color: transparent; border:none; border:2px solid white; color: white; padding: 10px; font-size: 20px;">Join us Now</button>
+    		</div>
+
+	
+</div>
+<div class="row about">
+	<p style="font-size: 100px; line-height: 80px;font-family: coda caption; padding-top: 40px;"><span style="border-top: 10px solid #4e5ac3; ">Top</span><br>Companies</p><br>
+</div>
+<div class="row about companies">
+	<div class="col-sm-4">
+		<li><img  src="https://pbs.twimg.com/profile_images/1375355015594840066/-J9PDpm2_400x400.jpg"></li>
+		<li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQknHDM2hIrfQ_8V6oltrWbEiOuizGzx_rG7g&usqp=CAU"></li>
+		<li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTF5U9PNyK-zPaMuD87am1TWsxI8pVLK4aTg&usqp=CAU"></li>
+		
+	</div>
+	<div class="col-sm-4">
+		<li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeFEilypA7xnzVqSFLyQ2zLrXaJ0YlkbdLlA&usqp=CAU"></li>
+		<li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaKhj5kYAju_pb-MMCja5BtGxBwxEsGUJXKg&usqp=CAU"></li>
+		<li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpjMtIrQrclRA0Uw_JMT3YpxyWVbu4FZKp8A&usqp=CAU"></li>
+		
+		
+	</div>
+	<div class="col-sm-4">
+		<li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQIZDzapXmrVV67CLsUDqbXo-rKlXBdD1og&usqp=CAU"></li>
+		<li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRODIxuy9iMNUY8nVKbEvLNvLn9IWwLCzuvYg&usqp=CAU"></li>
+		<li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl4oSele1C8eL7Sf0mBKbvEkoRccqaIKSCNQ&usqp=CAU"></li>
+		
+		
+	</div>
+	
+	
+</div>
+<div class="row depbg">
+	<div class="col-12 text-center text-white">
+		<p>Copy Rights : 2021</p>
+		
+	</div>
+	
+</div>
+
+
+			
+
+</body>
+</html>
